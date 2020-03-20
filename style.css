@@ -1,0 +1,439 @@
+@charset "utf-8";
+/* 固定ヘッダの高さ分 */
+html {
+    scroll-padding-top: 200px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body, p, h1, h2, img{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 80px;
+    background-color: #c99644;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .container{
+    display: flex;
+    height: inherit;
+    max-width: 1170px;
+    margin: 0 auto;
+
+}
+
+header h1{
+    align-self: center;
+}
+
+header h1 a{
+    font-family: 'Titan One', sans-serif ;
+    font-size: 50px;
+    color: black;
+}
+
+header nav{
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+header .sns{
+    align-self: flex-end;
+}
+
+header ul{
+    display: flex;
+}
+
+header nav a{
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: black;
+    padding:0 8px;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+
+/*ナビのアンダーライン*/
+header nav a::after {
+    position: absolute;
+    bottom: -8px;
+    /*aタグのafterなので後ろにlineが出るから*/
+    left: 0;
+    /*←before,afterとセットで使う,背景に色をつけて利用するためnull */
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    /*上記のwidth: 100%、height: 2pxをscale(0, 1)にしておく（縦１倍の表示なし）*/
+    transform: scale(0, 1);
+    transform-origin: center 0;
+    transition:.3s;
+}
+/* hoverした時のaタグの擬似要素 */
+header nav a:hover::after {
+    /*ｘを元の表示の１倍にしてアンダーラインを表示 */
+    transform: scale(1, 1);
+}
+
+header .sns a{
+    color: black;
+    font-size: 20px;
+}
+
+header .sns :first-child{
+    margin-right: 5px;
+}
+
+.smart-menu{
+    display: none;
+    width: 60px;
+    height: 60px;
+}
+.smart-menu:active{
+    opacity: 0.6;
+}
+
+.smart_wrapper{
+    position: fixed;
+    right: -50vw;
+    top: 80px;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(196, 196, 188);
+    z-index: 100;
+    transition: all .5s;
+}
+    
+.smart_wrapper.fadein{
+    right: 0;
+}
+
+.smart_header{
+    height: 55px;
+    border-bottom: 3px solid rgb(153, 149, 149);
+    text-align: center;
+}
+
+.smart_header a{
+    display: inline-block;
+    color: black;
+    font-size: 40px;
+    line-height: 55px;
+    padding: 0 20px;
+    
+}
+
+
+
+
+.smart_wrapper ul{
+    padding: 0;
+    margin: 0;
+
+}
+
+.smart_wrapper li{
+    line-height: 50px;
+    border-bottom: 1px solid rgb(153, 149, 149);
+    padding-left: 4vw;
+}
+
+.smart_wrapper nav a{
+    display: inline-block;
+    width: 50vw;
+    height: inherit;
+    color: black;
+}
+
+
+main{
+    padding: 200px 25px 80px;
+    height: 100%;
+    background-image: url(img/bg-sky.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+
+main.fixed{
+    position: fixed;
+    top:auto;
+    width: 100%;
+    filter: brightness(50%)
+} 
+
+
+
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;    
+    
+}
+
+.kumo_taiyou{
+    width: 200px;
+    position: absolute;
+    top: 6%;
+    left: 5vw;
+    
+}
+
+.truck{
+    z-index: 1;
+    width: 200px;
+    position: absolute;
+    top: 10%;
+    right: 3vw;
+    
+}
+
+h2{
+    margin: 0 0 30px;
+    text-align: center; 
+    font-family: 'Ultra',sans-serif;
+    font-size: 35px
+}
+#about{
+    position: relative;
+    margin: 0 auto 150px;
+    z-index: 5;
+    width: 80%;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    vertical-align: text-top;
+}
+
+.profile img{
+    margin-right: 30px;
+    width: 30%;
+    height: 30%;
+}
+.profile p{
+    font-size: 20px;
+    width: 70%;
+}
+
+#works{
+    width: 80%;
+    margin: 0 auto 150px;
+}
+
+#works p{
+    text-align: center;
+    font-size: 20px;
+}
+
+#contact{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contact p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-mail{
+    width: 39%;
+}
+
+.message{
+    width: 59%;
+}
+
+.name-mail input{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.message textarea{
+    padding: 8px 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 116px;
+    border-radius: 5px;
+}
+
+#sousin{
+    display: block;
+    margin: 20px auto 0;
+    border: 1px solid silver;
+    background-color: silver;
+    padding: 2px 10px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+#sousin:hover{
+    cursor : pointer;
+}
+
+#sousin:active{
+    opacity: 0.6;
+}
+
+input, textarea {
+    outline: none;
+}
+
+footer{
+    padding: 15px 20px;
+    height: 80px;
+    background-color: #c99644;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+}
+
+footer :first-child{
+    margin-right: 15px;
+}
+
+footer .fab{
+    margin: 0;
+}
+
+a:active{
+    opacity: 0.6;
+}
+
+
+footer p{
+    font-size: smaller;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+
+/*タブレット向けレイアウト*/
+@media(max-width:1025px){
+
+    .kumo_taiyou, .truck{
+        width: 150px;
+    }
+    #about, #works, #contact{
+        width: 90%;
+    }
+
+}
+
+
+/*スマホ向けレイアウト*/
+@media(max-width:600px){
+    header .container{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .kumo_taiyou, .truck{
+        width: 100px;
+    }
+    #about, #works, #contact{
+        width: 100%;
+    }
+
+    header h1 a{
+        font-size: 40px;
+    }
+    header nav, .sns{
+        display: none;
+    }
+
+    header .smart-menu{
+        display: block;
+    }
+
+    .profile{
+        flex-direction: column;
+        
+    }
+    .profile img{
+        width: 50%;
+        margin: 0 auto 15px;
+    }
+    .profile p{
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #works p{
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #contact p{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .contact-wrapper{
+        flex-direction: column;
+    }
+
+    .name-mail{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .name-mail input{
+        width: 100%;
+    }
+    .message{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #contact label{
+        margin: 2px;
+    }
+    #sousin{
+        padding: 2px 90px;
+    }
+}
