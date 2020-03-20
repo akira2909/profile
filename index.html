@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8">
+    <title>t-first</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- googleFont パイプで繋ぐことによって１行でOK -->
+    <link href="https://fonts.googleapis.com/css?family=Ultra|Titan+One&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 普通jquery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- こいつはいらなかった。 -->
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+    <!-- jquery-uiの読込 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1><a href="index.html">t-first</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#works">works</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="sns">
+                    <a class="btn" href="https://www.facebook.com/akira.takayasu.167" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn" href="https://twitter.com/akira41619878" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <img src="img/smart-nav.png" class="smart-menu" alt="menu">
+            </div>
+        </header>
+        <div class="smart_wrapper">
+            <div class="smart_header">
+                <a href="https://www.facebook.com/akira.takayasu.167"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/akira41619878"><i class="fab fa-twitter"></i></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <img class="truck" src="img/truck.png" alt="パッカー車">
+            <img class="kumo_taiyou" src="img/kumo_taiyou.png" alt="雲と太陽">
+            <div class="wrapper">
+                <div id="about">
+                    <h2>about</h2>
+                    <div class="profile">
+                        <img src="img/char_akira.png" alt="自分のイラスト">
+                        <p>
+                            1982年生まれ、漫画をこよなく愛する沖縄県出身の３７歳です。<br>
+                            現在オンラインで侍エンジニアにてプログラミングを勉強中。<br>
+                            今まで、バイク便をしたり、清掃業でパッカー車を運転したりしていました。パソコン１台で場所を選ばず,どこでもできるこの仕事にすごく魅力を感じます。よろしくお願いします。!!
+                        </p>
+                    </div>
+                </div>
+                <div id="works">
+                    <h2>works</h2>
+                    <p>開発言語：HTML、CSS、javascript(勉強中)</p>
+                    
+                </div>
+                <div id="contact">
+                    <h2>contact</h2>
+                    <p>気軽にメッセージください！！</p>
+                    <div class="contact-wrapper">
+                        <div class="name-mail">
+                            <label>名前</label>
+                            <input type="text">
+                            <label>メールアドレス</label>
+                            <input type="email">
+                        </div>
+                        <div class="message">
+                            <label>メッセージ</label>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" id="sousin" value="送信する">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a class="btn" href="https://www.facebook.com/akira.takayasu.167" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a class="btn" href="https://twitter.com/akira41619878" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <p>&copy;2020 --t-first--</p>
+        </footer>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
